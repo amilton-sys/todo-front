@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Todo</title>
 </head>
+
 <body>
-    <img alt="logo do todo">
-    <input type="text" placeholder="Adicione uma nova tarefa">
-    <button>+</button>
+    <header>
+        <img src="./assets/Logo.png" alt="logo do todo" class="logo">
+    </header>
 
-    <span>Criadas</span>
-    <i>0</i>
-    <span>Concluídas</span>
-    <i>0</i>
+    <main>
+        <div class="wrapper">
+            <div class="input">
+                <input type="text" placeholder="Adicione uma nova tarefa">
+                <button>+</button>
+            </div>
+        </div>
 
-    <hr>
+        <div class="wrapper">
+            <div class="status-tarefas">
+                <div>
+                    <span class="tarefas-criadas">Criadas</span>
+                    <i class="contador">0</i>
+                </div>
+                <div>
+                    <span class="tarefas-concluidas">Concluídas</span>
+                    <i class="contador">0</i>
+                </div>
+            </div>
+        </div>
 
-    <img alt="Lista vazia">
-    <p><em>Você ainda não tem tarefas cadastradas</em></p>
-    <p>Crie tarefas e organize seus itens a fazer</p>
+        <hr>
+
+        <img alt="Lista vazia">
+        <p><b>Você ainda não tem tarefas cadastradas</b></p>
+        <p>Crie tarefas e organize seus itens a fazer</p>
+
+    </main>
 </body>
+
 </html>
