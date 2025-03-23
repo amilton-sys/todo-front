@@ -9,11 +9,10 @@
 body {
     width: 375px;
     height: 812px;
-    border: 1px solid red;
     font-family: "Inter", sans-serif;
 }
 
-main{
+main {
     background-color: #1E1E1E;
     height: 639px;
 }
@@ -38,6 +37,11 @@ header {
     justify-content: center;
 }
 
+.wrapper.column {
+    flex-direction: column;
+    align-items: center;
+}
+
 .input {
     display: flex;
     justify-content: space-between;
@@ -47,19 +51,23 @@ header {
     margin-top: -30px;
 }
 
-.input > input {
+.input>input {
     width: 271px;
     height: 54px;
     padding: 15px;
     font-size: 16px;
-    color: #808080;
+    color: #F2F2F2;
     background-color: #262626;
     border-radius: 6px;
     border: 0.5px solid #000;
-
 }
 
-.input > button {
+.input>input:focus-visible {
+    border: 1px solid #8284FA;
+    outline: none;
+}
+
+.input>button {
     width: 52px;
     height: 52px;
     background-color: #1E6F9F;
@@ -67,11 +75,16 @@ header {
     border: none;
 }
 
+.input>button:active {
+    opacity: .9;
+}
+
 .status-tarefas {
     display: flex;
     justify-content: space-between;
     width: 327px;
     margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .tarefas-criadas {
@@ -97,4 +110,52 @@ header {
     border-radius: 999px;
     font-size: 12px;
     padding-top: 2px;
+    font-weight: bold;
+}
+
+.separator {
+    background-color: #333333;
+    height: 1px;
+    width: 327px;
+    margin-top: 20px;
+}
+
+.lista-vazia {
+    margin-top: 48px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #808080;
+}
+
+.tarefa {
+    display: flex;
+    width: 327px;
+    height: 64px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #262626;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+
+.tarefa.pendente {
+    box-shadow: 0px 0px 1px 0.1px #808080 inset;
+}
+
+.tarefa-botao {
+    border: none;
+}
+
+.tarefa-descricao {
+    word-break: break-word;
+    padding: 5px;
+    color: #D9D9D9;
+}
+
+.tarefa-descricao.done {
+    text-decoration: line-through #808080;
+    color: #808080;
 }
